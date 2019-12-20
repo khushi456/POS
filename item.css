@@ -1,0 +1,106 @@
+.footer{
+    margin-top: 65%;
+    margin-bottom: 10%;
+  }
+  .card-title{
+    text-align: center;
+    height: 20px;
+  }
+  body{
+    overflow: hidden;
+  }
+  .new {
+  width: 100%;
+  
+  margin:0px !important;
+  padding: 0px !important;
+  }
+  table {
+  border-collapse: collapse;
+  }
+  td {
+  padding-top: .1em;
+  padding-bottom: .1em;
+  }
+  
+  /* .b1{
+  width: 420px;
+  }
+  .b2{
+  width: 80px;
+  margin-right: 0px;
+  } */
+  .row, .row1 {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+  }
+  
+  .background2 p{
+      padding: 4px;
+      font-weight: 400;
+  }
+  
+  /* .dot {
+  height: 8px;
+  width: 8px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  } */
+  .background {
+  background-color: white;
+  color:black;
+  
+  }
+  .background2 nav{
+  height: 56px;
+  }
+  .background2 button{
+  color: black;
+  margin:5px;
+  font-size: 20px;
+  }
+  .background2 {
+  background-size: cover;
+  color:black;
+      background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1510&q=80");
+  }
+  
+
+/* adding link to the cards */
+  .card {
+    cursor: pointer;
+    
+  }
+  
+.grey{
+  float: right;
+  color:#6d6e6d;
+}
+
+.btn-light{  
+  color: black;
+  font-size: 13px;
+}
+#light{
+  border-radius: 40px;
+  margin-left: 10px;
+  padding-right: 15px;
+  margin-right: 10px;
+  padding-left: 15px;
+}
+
+/* .{
+  position: absolute;
+  border: 5px solid gray;
+  padding: 5px;
+  background: white;
+  width: 300px;
+  height: 400px;
+  overflow-y: scroll;
+} */

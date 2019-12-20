@@ -1,72 +1,91 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<style>
-		.form-group .form-control{
-			width:300px;
-			margin: auto;
-		}
-		body{
-			background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=&auto=format&fit=crop&w=1510&q=80");
 
-		}
-		.container{
-			text-align: center;
-			color: white;
-			margin-top: 150px;
-		}
-		.btn-xs{
-			width:300px;
-		}
-		.btn-secondary{
-			opacity: 0.7;
-		}
-		.new b{
-			font-size: 20px;
-		}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style>
+    .form-group .form-control {
+      width: 300px;
+      margin: auto;
+    }
 
-		</style>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    body {
+      background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=&auto=format&fit=crop&w=1510&q=80");
 
-    <title>RPos</title>
-  </head>
+    }
 
-  <body>
-		<div class="container">
+    .container {
+      text-align: center;
+      color: white;
+      margin-top: 150px;
+    }
+
+    .btn-xs {
+      width: 300px;
+    }
+
+    .btn-secondary {
+      opacity: 0.7;
+    }
+
+    .new b {
+      font-size: 20px;
+    }
+  </style>
+  <!-- Bootstrap CSS -->
+  <title>RPos</title>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="log.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+
+
+</head>
+
+<body>
+  <div class="container">
     <!-- <div class="jumbotron bg-transparent"> -->
     <h1 class="display-3">R<b>Pos</b></h1>
-	<br>
-	<form>
+    <br>
 
-	<div class="form-group">
-    <label for="exampleInputEmail1" class="new" style="margin-right: 150px;"><b>Register Login:</b></label><br>
-    <input type="email" class="form-control" id="exampleInputEmail">
+    <form id="form_id" method="POST">
+      <div class="form-group">
+        <label for="exampleInputEmail1" class="new" style="margin-right: 150px;"><b>Register Login:</b></label><br>
+        <input type="email" name="email" class="form-control" id="email">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1" class="new" style="margin-right: 200px;"><b>Password:</b></label><br>
+        <input type="password" name="password" class="form-control" id="password">
+      </div>
+
+      <br>
+      <button type="submit" class="btn btn-success btn-xs" id="action-btn"><b>Log in</b></button>
+      <br>
+      <br>
+      <a href="dialpad.html"><button type="button" class="btn btn-secondary btn-xs">Try Demo</button></a>
+
+    </form>
+
+    <!-- </div> -->
   </div>
 
-  <div class="form-group">
-    <label for="exampleInputPassword1" class="new" style="margin-right: 200px;"><b>Password:</b></label><br>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-	<br>
-  <button type="button" class="btn btn-success btn-xs" ><b>Log in</b></button>
-	<br>
-	<br>
-	<button type="button" class="btn btn-secondary btn-xs" >Try Demo</button>
+</body>
 
-</form>
-
-	 <!-- </div> -->
-</div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
 </html>

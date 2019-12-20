@@ -1,0 +1,71 @@
+body{
+    background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=&auto=format&fit=crop&w=1510&q=80");
+  }
+    nav{
+      height:56px;
+      margin-bottom: 40px;
+    }
+  nav .btn {
+    /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; 
+    background-color:transparent !important;
+    border-left: 1px solid rgb(29, 28, 29);
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+  }
+  
+  /* Darker background on mouse-over */
+  /* nav .btn:hover {
+    background-color: RoyalBlue;
+  } */
+
+    .tworec{
+      margin-left: 100px;
+    }
+    .tworec .btn{
+      height:120px;
+      width: 200px;
+      margin-right: 120px;
+      border-radius: 60px;
+    }
+    span .btn{
+      font-size: x-large;
+      font-weight: 650;
+    }
+    .seven .btn{
+      height:80px;
+      width:120px;
+      margin-left: 100px;
+      border-radius: 60px;
+    }
+    .nine .btn{margin-left: 160px;height:80px;width:125px;border-radius: 0 !important;}
+    .two .btn{height:80px;width:120px;margin-left: 80px;margin-top:140px;border-radius: 60px;}
+    .ten .btn{height:80px;width:120px;margin-left: 150px;margin-top:120px;border-radius: 60px;}
+    .four .btn{height:80px;width:120px;margin-left: 110px;margin-top:90px;border-radius: 60px;}
+    .three .btn{height:80px;width:120px;margin-left: 70px;margin-top:-50px;border-radius: 60px;}
+    .eight .btn{margin-left: 225px;height:80px;width:125px;border-radius: 0 !important;margin-top:-70px;}
+    .eleven .btn{margin-left: 1132px;height:80px;width:125px;border-radius: 0 !important;margin-top:-70px;}
+
+     .sixrec{
+      margin-left: 60px;
+    }
+    .sixrec .btn{
+      height:80px;
+      width:125px;
+      margin-top: 60px;
+      border-radius: 0 !important;
+      margin-right: 85px;
+    }
+    .modal-body a{
+      font-size: 15px;
+     
+    }
+    .modal-body span{
+      margin-left: 20px;
+     
+      
+    }

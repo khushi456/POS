@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="dialpadjs.js"></script>
+
 <style>
 body{
   overflow: hidden;
@@ -66,34 +69,31 @@ table{
 <table class="table1">
   <tbody>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><div id="output"></div></td>
     </tr>
   </tbody>
 </table>
 <table class="table">
   <tbody>
     <tr>
-        <td><button type="button" class="btn btn-light">1</button></td>
-        <td><button type="button" class="btn btn-light">2</button></td>
-        <td><button type="button" class="btn btn-light">3</button></td>
+        <td><button type="button" class="btn btn-light" onclick="myFunction1()">1</button></td>
+        <td><button type="button" class="btn btn-light" onclick="myFunction2()" >2</button></td>
+        <td><button type="button" class="btn btn-light" onclick="myFunction3()">3</button></td>
     </tr>
     <tr>
-      <td><button type="button" class="btn btn-light">4</button></td>
-      <td><button type="button" class="btn btn-light">5</button></td>
-      <td><button type="button" class="btn btn-light">6</button></td>
+      <td><button type="button" class="btn btn-light" onclick="myFunction4()">4</button></td>
+      <td><button type="button" class="btn btn-light" onclick="myFunction5()">5</button></td>
+      <td><button type="button" class="btn btn-light" onclick="myFunction6()">6</button></td>
     </tr>
     <tr>
-      <td><button type="button" class="btn btn-light">7</button></td>
-      <td><button type="button" class="btn btn-light">8</button></td>
-      <td><button type="button" class="btn btn-light">9</button></td>
+      <td><button type="button" class="btn btn-light" onclick="myFunction7()">7</button></td>
+      <td><button type="button" class="btn btn-light" onclick="myFunction8()">8</button></td>
+      <td><button type="button" class="btn btn-light" onclick="myFunction9()">9</button></td>
     </tr>
     <tr>
-      <td><button type="button" class="btn btn-light" style="background-color:#cacccf; border-color:#cacccf; font-size:18px;">clear</button></td>
-      <td><button type="button" class="btn btn-light">0</button></td>
-      <td><button type="button" class="btn btn-light" style="background-color:#cacccf; border-color:#cacccf;"><i class="material-icons">
+      <td><button type="button" class="btn btn-light" onclick="myFunctionclearall()"  style="background-color:#cacccf; border-color:#cacccf; font-size:18px;">clear</button></td>
+      <td><button type="button" class="btn btn-light" onclick="myFunction0()">0</button></td>
+      <td><button type="button" class="btn btn-light" onclick="myFunctionclear()" style="background-color:#cacccf; border-color:#cacccf;"><i class="material-icons">
 arrow_back
 </i></button></td>
     </tr>
