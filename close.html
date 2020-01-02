@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="payment.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="close.js"></script>
+    <link rel="stylesheet" href="close.css">
+    <title>RPos</title>
+</head>
+
+<body>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
+
+    <!-- nav -->
+    <!-- Image and text -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="item.html"><i class="material-icons" style="color: white; font-size: 0.8em;">arrow_back_ios</i></a>
+        <a class="navbar-brand" href="item.html">Cancel</a>
+        <a href="/" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25">Receipt</a>
+    </nav>
+    <!-- nav -->
+
+    <!-- background1 -->
+    <div class="new">
+        <div class="row">
+            <div class="col-5 col-lg-5 background" onclick="myfunct()">
+
+                <table class="table" style="margin-left:10px;">
+                    <tbody style="text-align:center;">
+                        <tr>
+                            <td><button type="button" style="width:90%; height:90px;" align:"center" class="btn"
+                                    disabled>50</button>
+                            </td>
+                            <td><button type="button" style="width:80%; height:90px;" align:"center" class="btn"
+                                    disabled>100</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- dialpad -->
+
+
+                <table class="table">
+                    <tbody style="text-align:center;">
+                        <tr>
+                            <td><button type="button" class="btn" disabled>7</button></td>
+                            <td><button type="button" class="btn" disabled>8</button></td>
+                            <td><button type="button" class="btn" disabled>9</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn" disabled>4</button></td>
+                            <td><button type="button" class="btn" disabled>5</button></td>
+                            <td><button type="button" class="btn" disabled>6</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn" disabled>1</button></td>
+                            <td><button type="button" class="btn" disabled>2</button></td>
+                            <td><button type="button" class="btn" disabled>3</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn" disabled>.</button></td>
+                            <td><button type="button" class="btn" disabled>0</button></td>
+                            <td><button type="button" class="btn" disabled><i class="material-icons">
+                                        arrow_back
+                                    </i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- dialpad -->
+
+            </div>
+            <!-- background2 -->
+            <div class="col-7 col-lg-7 background2">
+                <br>
+                <div class="container">
+                    <h3><b>Close without payment</b></h3>
+                    <br>
+                    <form>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <!-- Group of default radios - option 1 -->
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="defaultGroupExample1"
+                                        name="groupOfDefaultRadios" checked>
+                                    <label class="custom-control-label" for="defaultGroupExample1">Guest left</label>
+                                </div>
+                                <hr>
+                                <!-- Group of default radios - option 2 -->
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="defaultGroupExample2"
+                                        name="groupOfDefaultRadios">
+                                    <label class="custom-control-label" for="defaultGroupExample2">On the house</label>
+                                </div>
+                                <hr>
+                                <!-- Group of default radios - option 3 -->
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="defaultGroupExample3"
+                                        name="groupOfDefaultRadios">
+                                    <label class="custom-control-label" for="defaultGroupExample3">Waiter's
+                                        mistake</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <pre>
+                            
+
+
+
+
+
+
+
+
+
+
+                        </pre>
+                        <div>
+                            <a href="pay.html"><button type="button" class="btn btn-link" style="float:left; color:blue;">Cancel </button></a>
+                            <a href="tab.html"><button type="button" class="btn btn-danger btn-lg"
+                                    style="float:right; width:250px; height:50px;">Close without payment</button></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

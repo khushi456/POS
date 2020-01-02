@@ -9,11 +9,19 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Arimo&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="dialpadjs.js"></script>
+
 <style>
 body{
   overflow: hidden;
   margin: auto;
-  background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1510&q=80");
+  background-image: url("https://www.tweaksocialmedia.com/wp-content/uploads/2017/08/Light-wood-background.jpg");
 }
 
 table{
@@ -21,14 +29,16 @@ table{
 }
 
  .table button{
-   height:70px;
-   width:80px;
+   height:75px;
+   width:85px;
    background-color: #f2f2f2;
-   font-size: xx-large;
-   font-weight: 500;
+   text-align: center;
+   font-weight: 480;
    border-radius: 3px;
    border-color: #f2f2f2;
-   margin-bottom: 7px;
+   font-family: 'Arimo', sans-serif;
+   margin-bottom: 5px;
+   padding-top: 0px;
 
  }
  .container{
@@ -37,13 +47,14 @@ table{
  .table td{
    /* border: none; */
      border: none;
+     
      padding:0;
  }
  .table1{
 
    height:60px;
-   width:260px;
-   margin-top: 70%;
+   width:266px;
+   margin-top: 60%;
 
    font-size: xx-large;
    font-weight: 450;
@@ -56,6 +67,13 @@ table{
    border:2px solid #fcfcfc;
    background-color: #f7f7f7;
  }
+table .side{
+      text-align: center;
+      padding: 0px;
+ }
+ .font{
+ font-size: 52px;
+ }
 </style>
     <title>RPos</title>
 </head>
@@ -66,36 +84,33 @@ table{
 <table class="table1">
   <tbody>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><div id="output"></div></td>
     </tr>
   </tbody>
 </table>
 <table class="table">
   <tbody>
     <tr>
-        <td><button type="button" class="btn btn-light">1</button></td>
-        <td><button type="button" class="btn btn-light">2</button></td>
-        <td><button type="button" class="btn btn-light">3</button></td>
+        <td><button type="button" class="btn btn-light font" onclick="myFunction1()">1</button></td>
+        <td><button type="button" class="btn btn-light font" onclick="myFunction2()" >2</button></td>
+        <td><button type="button" class="btn btn-light font" onclick="myFunction3()">3</button></td>
     </tr>
     <tr>
-      <td><button type="button" class="btn btn-light">4</button></td>
-      <td><button type="button" class="btn btn-light">5</button></td>
-      <td><button type="button" class="btn btn-light">6</button></td>
+      <td><button type="button" class="btn btn-light font" onclick="myFunction4()">4</button></td>
+      <td><button type="button" class="btn btn-light font" onclick="myFunction5()">5</button></td>
+      <td><button type="button" class="btn btn-light font" onclick="myFunction6()">6</button></td>
     </tr>
     <tr>
-      <td><button type="button" class="btn btn-light">7</button></td>
-      <td><button type="button" class="btn btn-light">8</button></td>
-      <td><button type="button" class="btn btn-light">9</button></td>
+      <td><button type="button" class="btn btn-light font" onclick="myFunction7()">7</button></td>
+      <td><button type="button" class="btn btn-light font" onclick="myFunction8()">8</button></td>
+      <td><button type="button" class="btn btn-light font" onclick="myFunction9()">9</button></td>
     </tr>
     <tr>
-      <td><button type="button" class="btn btn-light" style="background-color:#cacccf; border-color:#cacccf; font-size:18px;">clear</button></td>
-      <td><button type="button" class="btn btn-light">0</button></td>
-      <td><button type="button" class="btn btn-light" style="background-color:#cacccf; border-color:#cacccf;"><i class="material-icons">
-arrow_back
-</i></button></td>
+      <td><button type="button" class="btn btn-light side" onclick="myFunctionclearall()"  style="background-color:#cacccf; border-color:#cacccf; font-size:18px;">Clear</button></td>
+      <td><button type="button" class="btn btn-light font" onclick="myFunction0()">0</button></td>
+      <td><button type="button" class="btn btn-light side" onclick="myFunctionclear()" style="background-color:#cacccf; border-color:#cacccf;"><i class="fas fa-backspace" style="font-size: 25px; "></i>
+      
+      </button></td>
     </tr>
   </tbody>
 </table>

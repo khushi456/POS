@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- font font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- end -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <title>RPos</title>
+    <link rel="stylesheet" href="tab.css">
+    <script src="tab.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between">
+        <a class="navbar-brand" href="#">Tables</a>
+
+        <!-- p -->
+        <a href="#" id="parking" style="margin-left: 10%;"><span><i class="fas fa-parking"
+                    style="font-size: 36px; color:grey;"></i></span>
+        </a>
+
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+            <ul class="navbar-nav text-right">
+                <li class="nav-item active mr-2">
+
+                    <button class="btn btn-dark toggle" id="btn1" onclick="myfunc()"><i class="material-icons">
+                            notifications_none
+                        </i></button>
+
+
+                    <div class="sidebar" id="side" onclick="myfunc2()">
+                        <!-- <h2>Notifications</h2> -->
+                        <div class="btn-group-sm not" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">My </button>
+                            <button type="button" class="btn btn-secondary">All</button>
+                            <!-- <button type="button" class="btn btn-secondary">Right</button> -->
+                        </div>
+
+                    </div>
+
+
+
+                    <button class="btn btn-dark" data-toggle="modal" data-target="#menu"><i class="material-icons">
+                            menu
+                        </i></button>
+
+                    <a href="dialpad.html"> <button class="btn btn-dark"><i class="material-icons">
+                                lock_open
+                            </i></button></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- kitchen-->
+    <div class="modal" tabindex="-1" role="dialog" id="pp">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header text-center" style="height: 50px;">
+                    <h6 class="modal-title w-100"><span class="oo" onclick="online()">Online orders</span><span
+                            class="ra" onclick="receipt()">Receipt
+                            archive</span></h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+
+                <div class="modal-body row" style="height: 500px;">
+                    <div class="col-md-4 leftside" style="background-color: #f9f9f9;">
+                        
+                        <div id="onlineorder">There are no incoming orders </div>
+
+                        <div id="receiptarchive"><i class="fas fa-spinner fa-spin" style="margin-left: 50%;"></i> </div>
+
+                    </div>
+                    <div class="col-md-8 rightside">
+                        <p> </p>
+                    </div>
+                </div>
+                <!-- <div class="modal-body row" style="height: 500px;">
+                    <div class="col-md-4" style="background-color: #f9f9f9;">
+                        <p>Column One content here ... </p>
+                    </div>
+                    <div class="col-md-8">
+                        <p>Column Two content here ... </p>
+                    </div>
+                </div> -->
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="menu">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Functions</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <h6><b>Reservation</b></h6>
+
+                    <a type="button" class="btn btn-light btn-lg"><i class="fa fa-calendar fa-lg"
+                            aria-hidden="true"></i><span> Reservation</a></span>
+                    <a type="button" class="btn btn-light btn-lg" id="addnew" data-toggle="modal"
+                        data-target="#exampleModal" onclick="anr()"><i class="fa fa-calendar-plus-o fa-lg"
+                            aria-hidden="true"></i><span>Add new
+                            reservation</a></span>
+                    <br><br>
+                    <h6><b>Equipment</b></h6>
+                    <a type="button" class="btn btn-light btn-lg"><i class="fa fa-calculator fa-lg"
+                            aria-hidden="true"></i><span>Devices</a></span>
+                    <a type="button" class="btn btn-light btn-lg"><i class="fa fa-money fa-lg"
+                            aria-hidden="true"></i><span>Open cashbox</a></span>
+                    <br><br>
+                    <h6><b>Other</b></h6>
+                    <a type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#report"><i
+                            class="fa fa-file-text-o fa-lg" aria-hidden="true"></i><span>Make report</a></span>
+                    <a type="button" class="btn btn-light btn-lg"><i class="fa fa-refresh fa-lg"
+                            aria-hidden="true"></i><span>Clear cache</a></span>
+                    <a type="button" class="btn btn-light btn-lg" href="index.html"><i class="fa fa-sign-out fa-lg"
+                            aria-hidden="true"></i><span>Sign out</a></span>
+
+                </div>
+
+                <!-- Add new regisration -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header text-center">
+
+                                <!-- back button -->
+                                <i class="material-icons"
+                                    style="font-size: 0.8em; margin-bottom: 0; line-height: 2.0; color: #428bca;">arrow_back_ios</i>
+                                <h5 style="float: left; color: #428bca;">
+                                    Functions
+                                </h5>
+
+                                <h5 class="modal-title w-100" id="exampleModalLabel">Add new
+                                    reservation</h5>
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body anr">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            Date and time:<input type="datetime-local" class="form-control">
+                                        </div>
+                                        <!-- <div class="col-lg-2">
+                                                Time:<input type="time" class="form-control">
+                                            </div> -->
+                                        <div class="col-lg-6">
+                                            Guest name:<input type="text" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            Guest count:
+                                            <select name="guest count" class="form-control">
+                                                <option value="1" selected>1</option>
+                                                <option>2</option value="1">
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            Phone:<input type="tel" class="form-control" id="phone" name="phone"
+                                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="20" maxlength="10" required>
+                                            <!-- maxlength="12"  -->
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            Duration:
+                                            <select name="Duration" class="form-control">
+                                                <option value="1" selected>1h</option>
+                                                <option>1h 30min</option value="1">
+                                                <option>2h</option>
+                                                <option>2h 30min</option>
+                                                <option>3h</option>
+                                                <option>3h 30min</option>
+                                                <option>4h</option>
+                                                <option>5h</option>
+                                                <option>6h</option>
+                                                <option>7h</option>
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+                                </form>
+                                <!-- <div class="row">
+                                        <div class="col">Time and date </div>
+                                        <div class="col">Guest name  </div>
+                                        <div class="w-100"></div>
+                                        <div class="col">Guest count</div>
+                                        <div class="col">Phone</div>
+                                        <div class="col"></div> -->
+                                <!-- <div class="w-100"></div> -->
+                                <!-- <div class="col">Duration</div> -->
+                                <!-- </div>  -->
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-success">Choose table</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- .... -->
+
+                <!-- Make Report -->
+                <div class="modal fade" id="report" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        From
+                                    </div>
+                                    <div class="col-lg-6">
+                                        Till
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <input type="date" class="form-control" required>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="date" class="form-control" required>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <input type="time" class="form-control">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="time" class="form-control" required>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        Waiter
+                                    </div>
+                                    <div class="col-lg-6">
+
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top: 5px;">
+
+                                    <div class="col-lg-6">
+                                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            style="width: 220px; text-align:left;">
+                                            All Waiters
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                            <button class="dropdown-item" type="button">Amishi</button>
+                                            <button class="dropdown-item" type="button">Anu</button>
+                                            <button class="dropdown-item" type="button">Khushi</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <button type="button" class="btn btn-success">Make report</button>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <input type="checkbox" id="switch" checked />
+                                        <label for="switch">Toggle</label>
+                                    </div>
+                                    <div class="col-lg-10" style="top: 28px; font-size: 18px;">
+                                        Sales by products
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- loaded popover content -->
+    <div id="popover-content" style="display: none;">
+        <ul class="list-group list-group-flush">
+          <a href="#">
+            <li class="list-group-item"><b>+ Add new reservation</b></li>
+          </a>
+          <a href="item.html">
+            <li class="list-group-item">Create new</li>
+          </a>
+        </ul>
+      </div>
+
+    <!-- tables -->
+    <div class="anu" >
+        <span class="tworec">
+            <a href='#'><button type="button" id="five" data-placement="bottom" data-toggle="popover"  data-name="5" class="btn btn-primary">5</button></a>
+            <a href='#'><button type="submit"  id="one" data-placement="bottom" data-toggle="popover" data-name="1" class="btn btn-primary" >1</button></a>
+        </span>
+        <span class="seven">
+            <a href='#'><button type="button" data-placement="bottom" id="seven" data-toggle="popover" data-name="7" class="btn btn-dark">7</button></a>
+        </span>
+        <span class="nine">
+            <a href='#'><button type="button" data-placement="bottom"  id="nine" data-toggle="popover" data-name="9" class="btn btn-primary">9</button></a>
+        </span>
+        <br>
+        <span class="two">
+            <a href='#'><button type="button" id="two" data-placement="bottom" id="two" data-toggle="popover"  data-name="2"  class="btn btn-dark">2</button></a>
+        </span>
+        <span class="ten">
+            <a href='#'><button type="button" data-placement="bottom" data-toggle="popover" id="ten" data-name="10" class="btn btn-primary">10</button></a>
+        </span>
+        <span class="four">
+            <a href='#'><button type="button" data-placement="bottom" data-toggle="popover" id="four" data-name="4" class="btn btn-dark">4</button></a>
+        </span>
+        <span class="three">
+            <a href='#'><button type="button" data-placement="bottom" data-toggle="popover" id="three" data-name="3" class="btn btn-primary">3</button></a>
+        </span>
+        <span class="eight">
+            <a href='#'><button type="button" data-placement="bottom" data-toggle="popover"  id="eight" data-name="8" class="btn btn-primary">8</button></a>
+            <span class="eleven">
+                <a href='#'><button type="button" data-placement="bottom" data-toggle="popover" id="eleven"  data-name="11" class="btn btn-primary">11</button></a>
+            </span>
+        </span>
+        <br>
+        <span class="sixrec">
+            <a href='#'><button type="button" data-placement="bottom" data-toggle="popover" id="seventeen" data-name="17" class="btn btn-primary">17</button></a>
+            <a href='#'><button type="button" data-placement="bottom" data-toggle="popover" id="sixteen" data-name="16" class="btn btn-dark">16</button></a>
+            <a href='#'><button type="button" data-placement="bottom" data-toggle="popover" id="fifteen" data-name="15" class="btn btn-dark">15</button></a>
+            <a href='#'><button type="button" data-placement="bottom" data-toggle="popover" id="fourteen" data-name="14" class="btn btn-primary">14</button></a>
+            <a href='#'><button type="button" data-placement="bottom" data-toggle="popover" id="thirteen" data-name="13" class="btn btn-primary">13</button></a>
+        </span>
+        <span class="last">
+            <a href='#'><button type="button" data-placement="bottom" data-toggle="popover" id="twelve" data-name="12" class="btn btn-dark" id="lastbtn">12</button></a>
+        </span>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,1130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="item.css">
+  <script src="item.js"></script>
+
+  <title>RPos</title>
+
+</head>
+
+<body>
+  <div class="row">
+    <div class="background" style="width:37.485%;">
+      <!--Creating table-->
+
+      <nav class="navbar navbar-dark navbar-expand-md bg-dark justify-content-between" style="height: 56px;">
+        <div class="container-fluid">
+          <div class="navbar-collapse collapse w-50">
+            <a href="tab.html"><i class="material-icons" style="color:white; font-size: 0.80em;">arrow_back_ios</i></a>
+            <a class="navbar-brand" href="tab.html" style="font-size:18px;">Tables</a>
+          </div>
+
+          <a href="/" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25"
+            style="font-size:18px;">Table <span id="abc">0</span></a>
+
+          <div class="navbar-collapse collapse dual-nav w-50 order-2">
+            <ul class="nav navbar-nav ml-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false" style="font-size:18px; color: white;">
+                  Receipt#
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">No. 1538482</a>
+                  <a class="dropdown-item" href="#">No. 1538483</a>
+                  <a class="dropdown-item" href="#">No. 1538484</a>
+                  <!-- <a class="dropdown-item" href="#">Another action</a>-->
+
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="item.html">Create new</a>
+                </div> 
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col" style="width:180px">Name</th>
+            <th scope="col" style="width:130px">Q-ty</th>
+            <th scope="col" style="width:85px">Price</th>
+            <th scope="col" style="width:85px">Subtotal</th>
+          </tr>
+        </thead>
+        <!-- <div class="bodycontainer scrollable"> -->
+        <table style="width:37.485%; display: -moz-groupbox;">
+          <tbody class="show-cart table"
+            style="overflow-y: scroll; height: 50%; width:37.485%; position: absolute; margin-top:-17px;">
+
+          </tbody>
+        </table>
+        <div style="display:none">
+          <table style="height:340px; width:37.485%; display: -moz-groupbox;">
+            <tbody class="split-cart table"
+              style="overflow-y: scroll; height: 340px; width:37.485%; position: absolute;">
+            </tbody>
+          </table>
+        </div>
+        <!-- </div> -->
+        <!-- </div> -->
+      </table>
+      <div style="display:none">
+        <table class="hidden" id="divone" style="height:300px; width:37.485%;  display: -moz-groupbox;">
+
+          <tbody class="show-cart1 table" id="divtwo"
+            style="overflow-y: scroll; height: 300px; width:37.485%; position: absolute;">
+
+          </tbody>
+        </table>
+      </div>
+      <!-- Footer -->
+      <div class="footer" style="margin-bottom: -25px;">
+        <hr display=2px>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="text-align: center;">
+          <!-- <div class="btn-group clear-cart" role="group" class="-cart" aria-label="Fourth group"
+            style="margin:0 20px; width:200px;">
+            <button type="button" class="btn btn-success btn-sm clear" style=" border-radius: 0px; width: 50%;">Clear
+              Cart</button>
+          </div> -->
+          <div class="btn-group" role="group" aria-label="Fourth group"
+            style="margin:0px 0 0px 25px; width: 75%; height:35px;">
+            <button type="button" class="btn btn-success clear"
+              style=" border-radius: 0px; width: 50%; border-radius:5px 0px 0px 5px; font-weight: 400;">Send</button>
+          </div>
+          <div class="btn-group" role="group" aria-label="Fourth group"
+            style="margin:0px 25px 0px 0; width:40px; height:35px;">
+            <button type="button" data-toggle="modal" data-target="#cart" class="btn btn-success clear"
+              style="text-align: center; border-radius: 0px; border-left: 1px solid green; border-radius:0px 5px 5px 0px;">
+              <i class="material-icons">
+                more_horiz
+              </i>
+            </button>
+          </div>
+        </div>
+
+        <div class="container">
+          <table class="table table-borderless">
+            <tbody>
+              <tr>
+                <td>Subtotal</td>
+                <td><b>$<span class="total-cart"></span></b></td>
+                <td><b>Total</b></td>
+              </tr>
+              <tr>
+                <td>Discount</td>
+                <td><b>15%</b></td>
+                <td><b>$<span class="discount-cart"></span></b></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- loaded popover content -->
+          <div id="popover-content" style="display: none;">
+            <ul class="list-group list-group-flush">
+              <a href="#">
+                <li class="list-group-item" id="receiptComment">Receipt comment</li>
+              </a>
+              <a href="tab.html">
+                <li class="list-group-item">Change table</li>
+              </a>
+              <a href="#">
+                <li class="list-group-item">Split order</li>
+              </a>
+              <a href="#">
+                <li class="list-group-item" id="clear-cart">Clear order</li>
+              </a>
+              <a href="#">
+                <li class="list-group-item">Change waiter</li>
+              </a>
+              <a href="#">
+                <li class="list-group-item" id="guest-count">Change Guest Count</li>
+              </a>
+            </ul>
+          </div>
+          <!-- // -->
+          <div id="guest-count" style="display: none;">
+            <ul class="list-group list-group-flush">
+              <a href="#">
+                <li class="list-group-item">Guest Count</li>
+              </a>
+              <a href="#">
+                <li class="list-group-item">1</li>
+              </a>
+              <a href="#">
+                <li class="list-group-item">2</li>
+              </a>
+              <a href="#">
+                <li class="list-group-item">3</li>
+              </a>
+            </ul>
+          </div>
+          <!-- <div id="popover-content" style="display: none">
+            <a class="list-group-item list-group-item-action" id="receiptComment">Receipt comment</a>
+            <a href="tab.html" class="list-group-item list-group-item-action">Change table</a>
+            <a href="#" class="list-group-item list-group-item-action">Split order</a>
+            <a href="#" class="list-group-item list-group-item-action">Clear order</a>
+            <a href="#" class="list-group-item list-group-item-action">Change order</a>
+            <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1"
+              aria-disabled="true">Change guest count</a>
+
+          </div> -->
+
+
+          <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-bottom: 5px;">
+            <div class="btn-group" role="group" aria-label="First group" style="width:70px; margin-right: 10px;">
+              <button type="button" rel='popover' data-placement="bottom" data-toggle="popover"
+                class="btn btn-light btn-sm"><i class="material-icons" style="font-size: 1.8em;">
+                  more_horiz
+                </i></button>
+            </div>
+
+            <div class="btn-group" role="group" aria-label="Second group" id="percent"
+              style="width:70px; margin-right: 10px;">
+              <button type="button" class="btn btn-light btn-sm"><i class="fa fa-percent"></i></button>
+            </div>
+
+            <div class="btn-group" role="group" aria-label="Third group" style="width:70px;">
+              <button type="button" onclick="myfun('divone')" class="btn btn-light btn-sm"><i class="material-icons">
+                  print
+                </i> </button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Fourth group" style="width:150px; margin-left:60px;">
+              <a href="pay.html">
+                <div class="btn-group" role="group" aria-label="Fourth group" style="width:150px; margin-left:10px;">
+                  <button type="button" class="btn btn-success btn-sm Pay"
+                    style="font-size: large; font-weight: 500;">Pay</button>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Footer -->
+    </div>
+
+
+    <div class="background2" style="width:62.515%;">
+      <!-- header -->
+
+      <nav class="navbar nav1 navbar-expand-sm bg-dark navbar-dark justify-content-end">
+
+        <a href="#" id="parking" style="margin-right: 56%;"><span><i class="fas fa-parking"
+              style="font-size: 36px; color:grey;"></i></span>
+        </a>
+
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+          <ul class="navbar-nav text-right">
+            <li class="nav-item active mr-2">
+
+              <button class="btn btn-dark toggle" id="btn1" onclick="myfunc()"><i class="material-icons">
+                  notifications_none
+                </i></button>
+
+              <button class="btn btn-dark" data-toggle="modal" data-target="#menu"><i class="material-icons">
+                  menu
+                </i></button>
+
+              <a href="dialpad.html"> <button class="btn btn-dark">
+
+                  <i class="material-icons">
+                    lock_open
+                  </i></button></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- kitchen-->
+      <div class="modal" tabindex="-1" role="dialog" id="pp">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+
+            <div class="modal-header text-center" style="height: 50px;">
+              <h6 class="modal-title w-100"><span class="oo" onclick="online()">Online orders</span><span class="ra"
+                  onclick="receipt()">Receipt
+                  archive</span></h6>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+
+            <div class="modal-body row" style="height: 500px;">
+              <div class="col-md-4 leftside" style="background-color: #f9f9f9;">
+
+                <div id="onlineorder">There are no incoming orders </div>
+
+                <div id="receiptarchive"><i class="fas fa-spinner fa-spin" style="margin-left: 50%;"></i> </div>
+
+              </div>
+              <div class="col-md-8 rightside">
+                <p> </p>
+              </div>
+            </div>
+            <!-- <div class="modal-body row" style="height: 500px;">
+              <div class="col-md-4" style="background-color: #f9f9f9;">
+                  <p>Column One content here ... </p>
+              </div>
+              <div class="col-md-8">
+                  <p>Column Two content here ... </p>
+              </div>
+          </div> -->
+
+
+          </div>
+        </div>
+      </div>
+
+      <!-- menu -->
+      <!-- Modal -->
+      <div class="modal fade" id="menu">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h5 class="modal-title">Functions</h5>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body" id="bod">
+              <h6><b>Reservation</b></h6>
+              <a type="button" class="btn btn-light btn-lg"><i class="fa fa-calendar fa-lg"
+                  aria-hidden="true"></i><span> Reservation</a></span>
+              <a type="button" class="btn btn-light btn-lg" id="addnew" data-toggle="modal" data-target="#exampleModal"
+                onclick="anr()"><i class="fa fa-calendar-plus-o fa-lg" aria-hidden="true"></i><span>Add new
+                  reservation</a></span>
+              <br><br>
+              <h6><b>Equipment</b></h6>
+              <a type="button" class="btn btn-light btn-lg"><i class="fa fa-calculator fa-lg"
+                  aria-hidden="true"></i><span>Devices</a></span>
+              <a type="button" class="btn btn-light btn-lg"><i class="fa fa-money fa-lg"
+                  aria-hidden="true"></i><span>Open cashbox</a></span>
+              <br><br>
+
+              <h6><b>Other</b></h6>
+              <a type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#report"><i
+                  class="fa fa-file-text-o fa-lg" aria-hidden="true"></i><span>Make report</a></span>
+              <a type="button" class="btn btn-light btn-lg"><i class="fa fa-refresh fa-lg"
+                  aria-hidden="true"></i><span>Clear cache</a></span>
+              <a type="button" class="btn btn-light btn-lg" href="index.html"><i class="fa fa-sign-out fa-lg"
+                  aria-hidden="true"></i><span>Sign out</a></span>
+
+            </div>
+
+            <!-- Add new regisration -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header text-center">
+
+                    <!-- back button -->
+                    <i class="material-icons"
+                      style="font-size: 0.8em; margin-bottom: 0; line-height: 2.0; color: #428bca;">arrow_back_ios</i>
+                    <h5 style="float: left; color: #428bca;">
+                      Functions
+                    </h5>
+
+                    <h5 class="modal-title w-100" id="exampleModalLabel">Add new
+                      reservation</h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+
+                  <div class="modal-body anr">
+                    <form>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          Date and time:<input type="datetime-local" class="form-control">
+                        </div>
+                        <!-- <div class="col-lg-2">
+                                              Time:<input type="time" class="form-control">
+                                          </div> -->
+                        <div class="col-lg-6">
+                          Guest name:<input type="text" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          Guest count:
+                          <select name="guest count" class="form-control">
+                            <option value="1" selected>1</option>
+                            <option>2</option value="1">
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+
+                          </select>
+                        </div>
+                        <div class="col-lg-6">
+                          Phone:<input type="tel" class="form-control" id="phone" name="phone"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="20" maxlength="10" required>
+                          <!-- maxlength="12"  -->
+
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          Duration:
+                          <select name="Duration" class="form-control">
+                            <option value="1" selected>1h</option>
+                            <option>1h 30min</option value="1">
+                            <option>2h</option>
+                            <option>2h 30min</option>
+                            <option>3h</option>
+                            <option>3h 30min</option>
+                            <option>4h</option>
+                            <option>5h</option>
+                            <option>6h</option>
+                            <option>7h</option>
+                          </select>
+
+                        </div>
+
+                      </div>
+                    </form>
+                    <!-- <div class="row">
+                                      <div class="col">Time and date </div>
+                                      <div class="col">Guest name  </div>
+                                      <div class="w-100"></div>
+                                      <div class="col">Guest count</div>
+                                      <div class="col">Phone</div>
+                                      <div class="col"></div> -->
+                    <!-- <div class="w-100"></div> -->
+                    <!-- <div class="col">Duration</div> -->
+                    <!-- </div>  -->
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success">Choose table</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- .... -->
+
+            <!-- Make Report -->
+            <div class="modal fade" id="report" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        From
+                      </div>
+                      <div class="col-lg-6">
+                        Till
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <input type="date" class="form-control" required>
+                      </div>
+                      <div class="col-lg-6">
+                        <input type="date" class="form-control" required>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <input type="time" class="form-control">
+                      </div>
+                      <div class="col-lg-6">
+                        <input type="time" class="form-control" required>
+                      </div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        Waiter
+                      </div>
+                      <div class="col-lg-6">
+
+                      </div>
+                    </div>
+                    <div class="row" style="margin-top: 5px;">
+
+                      <div class="col-lg-6">
+                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                          style="width: 220px; text-align:left;">
+                          All Waiters
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                          <button class="dropdown-item" type="button">Amishi</button>
+                          <button class="dropdown-item" type="button">Anu</button>
+                          <button class="dropdown-item" type="button">Khushi</button>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6">
+                        <button type="button" class="btn btn-success">Make report</button>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-lg-2">
+                        <input type="checkbox" id="switch" checked />
+                        <label for="switch">Toggle</label>
+                      </div>
+                      <div class="col-lg-10" style="top: 28px; font-size: 18px;">
+                        Sales by products
+                      </div>
+
+
+                    </div>
+
+
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal footer -->
+            <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- menu end -->
+
+
+
+
+
+      <!-- start -->
+
+      <!-- 
+      <div class="container">
+
+        <button type="button" class="btn btn-light btn-light1 btn-sm" id="light">All
+          goods</button>
+        <span style="float:right;">
+          <span class="searchBox">
+
+            <input class="searchInput" type="text" name="" placeholder="Search">
+            <button type="button" class="btn btn-light btn-light1 searchButton"><i class="fa fa-search fa-lg"
+                aria-hidden="true"></i></button>
+
+          </span>
+
+          <button type="button" class="btn btn-light btn-light1 "><i class="fa fa-barcode fa-lg" aria-hidden="true"></i></button>
+
+          comment<button type="button" class="btn btn-light"><i class="fa fa-search" aria-hidden="true"></i></button> 
+          <button type="button" class="btn btn-light btn-light1" data-toggle="modal" data-target="#promotion">Promotions</button>
+        </span>
+      </div> -->
+      <div class="container">
+        <button type="button" class="btn btn-light  btn-light1 btn-sm" id="light">All
+          goods</button>
+        <span class="autocomplete" id="bar" style="margin-left : 8%; margin-top:10px;">
+          <input id="myInput" style="border-radius:5px; width:350px; background-color: #f9f9f9;" type="text"
+            name="itemNames" placeholder="Search"></span>
+        <span style="float:right;">
+          <button type="button" id="bar-icon" class="btn btn-light btn-light1  searchButton"><i
+              class="fa fa-search fa-lg" aria-hidden="true"></i></button>
+          <button type="button" class="btn btn-light btn-light1"><i class="fa fa-barcode fa-lg"
+              aria-hidden="true"></i></button>
+          <!-- <button type="button" class="btn btn-light"><i class="fa fa-search" aria-hidden="true"></i></button> -->
+          <button type="button" class="btn btn-light btn-light1 " data-toggle="modal"
+            data-target="#promotion">Promotions</button>
+        </span>
+      </div>
+
+
+      <!-- promotions -->
+      <div class="modal fade bd-example-modal-lg" id="promotion" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h6 class="modal-title w-100" id="exampleModalCenterTitle">Promotions and bonuses</h6>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" style="height:400px; text-align: center;">
+              <span style="float: center;">You don't have any active promotions. To add a promotion, go to
+                Marketing -><br>
+                Promotions in your back-office</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade" tabindex="-1" role="dialog" id="changeProfileModal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title">Modal title</h4>
+            </div> -->
+            <div class="modal-body">
+              <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="2"
+                placeholder="Receipt Comment"></textarea>
+              <!-- <textarea type="text" id="form7" cols="100" rows="3" style="margin-left: 50px;" class="md-textarea pt-1 py-0 pb-0" placeholder="Enter Comment"></textarea> -->
+              <br>
+              <button type="button" Style="color: white; width:80px;" class="btn btn-success">Done</button>
+              <button type="button" Style="width:80px;" class="btn btn-light" data-dismiss="modal">Cancel</button>
+            </div>
+            <!-- <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" >Save changes</button>
+            </div> -->
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+
+
+      <!-- header -->
+
+      <!-- card -->
+      <br>
+      <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+      <!-- data-toggle="collapse" data-target="#demo" -->
+
+      <div class="row1" id="one">
+        <!-- data-toggle="collapse" data-target="#demo" -->
+        <div class="col-sm-3" data-toggle="collapse" data-target="#demo">
+          <div class="card" onclick="myFunction1()">
+            <img
+              src="https://images.unsplash.com/photo-1529059997568-3d847b1154f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+              class="card-img-top" alt="...">
+            <p class="card-title">Salads</p>
+          </div>
+        </div>
+        <!-- data-toggle="collapse" data-target="#fish" -->
+        <div class="col-sm-3" data-toggle="collapse" data-target="#fish">
+          <div class="card" onclick="myFunction2()">
+            <img
+              src="https://images.unsplash.com/photo-1556845754-6f01a6cf8d21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+              class="card-img-top" alt="...">
+            <p class="card-title">Fish</p>
+          </div>
+        </div>
+        <!-- data-toggle="collapse" data-target="#soups" -->
+        <div class="col-sm-3" data-toggle="collapse" data-target="#soups">
+          <div class="card" onclick="myFunction3()">
+            <img
+              src="https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80"
+              class="card-img-top" alt="...">
+            <p class="card-title">Soups</p>
+          </div>
+        </div>
+        <!-- data-toggle="collapse" data-target="#desserts" -->
+        <div class="col-sm-3" data-toggle="collapse" data-target="#desserts">
+          <div class="card" onclick="myFunction4()">
+            <img
+              src="https://images.unsplash.com/photo-1541779774450-da0f04dd9080?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              class="card-img-top" alt="...">
+            <p class="card-title">Desserts</p>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+
+
+      <!-- salads -->
+      <div id="demo" class="collapse">
+        <div class="row" id="sal">
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Salmon salads" data-price="29.25">
+              <img
+                src="https://images.unsplash.com/photo-1508170754725-6e9a5cfbcabf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Salmon salads</span><span class="grey">29.25$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Seafood salad" data-price="28">
+              <img
+                src="https://images.unsplash.com/photo-1539586345401-51d5bfba7ac0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Seafood salad</span><span class="grey">28$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Caesar salad" data-price="13">
+              <img
+                src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=735&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Caesar salad</span><span class="grey">13$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Greek salad" data-price="12">
+              <img
+                src="https://images.unsplash.com/photo-1555057949-7e4a30956f1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Greek salad</span><span class="grey">12$</span></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Fish -->
+      <div id="fish" class="collapse">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Roasted Salmon" data-price="35">
+              <img
+                src="https://images.unsplash.com/photo-1555243896-c709bfa0b564?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Roasted Salmon</span><span class="grey">35$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Smoky hake" data-price="32">
+              <img
+                src="https://images.unsplash.com/photo-1546069901-5ec6a79120b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Smoky hake</span><span class="grey">32$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Salmon sandwich" data-price="10">
+              <img
+                src="https://images.unsplash.com/photo-1548946522-4a313e8972a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=740&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Salmon sandwich</span><span class="grey">10$</span></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Soups -->
+      <div id="soups" class="collapse">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Minestone" data-price="11">
+              <img
+                src="https://images.unsplash.com/photo-1566363711363-70f57f04aba7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Minestone</span><span class="grey">11$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Borsch" data-price="10">
+              <img
+                src="https://images.unsplash.com/photo-1576020688457-6f06d17c5702?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Borsch</span><span class="grey">10$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Vegetable soup" data-price="8">
+              <img
+                src="https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Vegetable soup</span><span class="grey">8$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Cheese creamy soup" data-price="10">
+              <img
+                src="https://images.unsplash.com/photo-1544068192-4c4af19868c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Cheese creamy soup</span><span class="grey">10$</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Desserts -->
+      <div id=desserts class="collapse">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Lime cupcake" data-price="11">
+              <img
+                src="https://images.unsplash.com/photo-1453499988014-b7b65cc79c13?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Lime cupcake</span><span class="grey">11$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Banana pie" data-price="16">
+              <img
+                src="https://images.unsplash.com/photo-1517777596324-5df4025800f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Banana pie</span><span class="grey">16$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Brownie" data-price="18">
+              <img
+                src="https://images.unsplash.com/photo-1498602679121-1adc04bd257f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=775&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Brownie</span><span class="grey">18$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Carrot cake" data-price="15">
+              <img
+                src="https://images.unsplash.com/photo-1531226767635-cf013616cd5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Carrot cake</span><span class="grey">15$</span></p>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Cheesecake" data-price="15">
+              <img
+                src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Cheesecake</span><span class="grey">15$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Cherry pie" data-price="9">
+              <img
+                src="https://images.unsplash.com/photo-1553699950-29a94e732d8d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=749&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Cherry pie</span><span class="grey">9$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Chia pudding" data-price="9">
+              <img
+                src="https://images.unsplash.com/photo-1490474504059-bf2db5ab2348?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Chia pudding</span><span class="grey">9$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Rasberry cake" data-price="10">
+              <img
+                src="https://images.unsplash.com/photo-1571741443170-97e080e5b808?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Rasberry cake</span><span class="grey">10$</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- card2 -->
+
+      <div class="row" id="two">
+        <div class="col-sm-3" data-toggle="collapse" data-target="#fruit">
+          <div class="card" onclick="myFunction5()">
+            <img
+              src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+              class="card-img-top" alt="...">
+            <p class="card-title">Fruit</p>
+          </div>
+        </div>
+        <div class="col-sm-3" data-toggle="collapse" data-target="#bread">
+          <div class="card" onclick="myFunction6()">
+            <img
+              src="https://images.unsplash.com/photo-1538732792755-6c2b090a567a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=730&q=80"
+              class="card-img-top" alt="...">
+            <p class="card-title">Bread</p>
+          </div>
+        </div>
+        <div class="col-sm-3" data-toggle="collapse" data-target="#meat">
+          <div class="card" onclick="myFunction7()">
+            <img
+              src="https://images.unsplash.com/photo-1547637205-fde0c9011f9d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+              class="card-img-top" alt="...">
+            <p class="card-title">Meat</p>
+          </div>
+        </div>
+        <div class="col-sm-3" data-toggle="collapse" data-target="#beverages">
+          <div class="card" onclick="myFunction8()">
+            <img
+              src="https://images.unsplash.com/photo-1551198297-094dd136d3e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+              class="card-img-top" alt="...">
+            <p class="card-title">Beverages</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fruit -->
+
+      <div id="fruit" class="collapse">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Apples" data-price="1">
+              <img
+                src="https://images.unsplash.com/photo-1513677785800-9df79ae4b10b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Apples</span><span class="grey">1$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Oranges" data-price="4">
+              <img
+                src="https://images.unsplash.com/photo-1512578000375-660f001ef96d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Oranges</span><span class="grey">4$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Banana" data-price="3">
+              <img
+                src="https://images.unsplash.com/photo-1556011281-39247e134551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Banana</span><span class="grey">3$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Grapes" data-price="2">
+              <img
+                src="https://images.unsplash.com/photo-1460400408855-36abd76648b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Grapes</span><span class="grey">2$</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- fruit
+       -->
+      <!-- Bread -->
+      <div id="bread" class="collapse">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Bread basket" data-price="2">
+              <img src="https://image.freepik.com/free-photo/assortment-baked-bread_87742-8714.jpg" class="card-img-top"
+                alt="...">
+              <p class="card-title"><span style="float: left;">Bread basket</span><span class="grey">2$</span></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- breadend -->
+      <div id="meat" class="collapse">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Porterhouse steak" data-price="15">
+              <img
+                src="https://images.unsplash.com/photo-1564857767283-2218d1cfb032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Porterhouse steak</span><span class="grey">15$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Chicken sandwich" data-price="13">
+              <img
+                src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">chicken sandwich</span><span class="grey">13$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Meat donuts" data-price="14">
+              <img
+                src="https://images.unsplash.com/photo-1544219092-b14ec5f83caa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">Meat donuts</span><span class="grey">14$</span></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Chicken wings" data-price="24">
+              <img
+                src="https://images.unsplash.com/photo-1426869981800-95ebf51ce900?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                class="card-img-top" alt="...">
+              <p class="card-title"><span style="float: left;">chicken wings</span><span class="grey">24$</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="beverages" class="collapse">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="card card1" data-name="Beverages" data-price="20">
+              <img src="https://image.freepik.com/free-photo/assortment-baked-bread_87742-8714.jpg" class="card-img-top"
+                alt="...">
+              <p class="card-title"><span style="float: left;">Beverages</span><span class="grey">2$</span></p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Kitchen</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table style="height:180px; width:775px; display: -moz-groupbox;">
+            <tbody class="split-cart table"
+              style="overflow-y: scroll; height:180px; width:775px; position: absolute; margin-top:-17px;">
+
+            </tbody>
+          </table>
+          <a href="item.html"><button type="button" class="btn btn-success">Send</button></a>
+          <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+          <!-- <div>Total price: $<span class="total-cart"></span></div> -->
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-success">Send</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <!-- notification -->
+  <div class="sidebar" id="side">
+    <!-- <h2>Notifications</h2> -->
+    <div class="btn-group-sm not" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-secondary btn-dark ">My </button>
+      <button type="button" class="btn btn-secondary btn-dark ">All</button>
+      <!-- <button type="button" class="btn btn-secondary">Right</button> -->
+    </div>
+
+  </div>
+  <!--percentage  -->
+
+  <div class="modal" tabindex="-1" role="dialog" id="percentmodal">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">
+            <span class="autocomplete" id="bar2">
+              <input id="myInput2" style="border-radius:5px; width:350px; background-color: #f9f9f9;" type="text"
+                name="itemNames2" placeholder="Search"></span>
+
+          </h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="font-size: medium; color:#0320fc;">Close</span>
+          </button>
+        </div>
+
+
+        <div class="modal-body rownew">
+          <div class="col-md-6 lside" style="background-color: #f9f9f9;">
+            <ul class="list-group list-group-flush " style="margin-right: -20px; margin-left: -18px;">
+              <li class="list-group-item">John</li>
+
+              <li class="list-group-item">Morbi </li>
+              <li class="list-group-item">leo</li>
+              <li class="list-group-item">Joey</li>
+              <li class="list-group-item">Monica</li>
+              <li class="list-group-item">Anu</li>
+              <li class="list-group-item">Aliza</li>
+              <li class="list-group-item">Subodh</li>
+              <li class="list-group-item">Sara</li>
+
+            </ul>
+
+          </div>
+          <div class="col-md-6 rside">
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  -->
+
+
+
+
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+<!-- CodeMirror-scroll {
+  overflow: scroll !important;
+  /* Things will break if this is overridden */
+  /* 30px is the magic margin used to hide the element's real scrollbars */
+  /* See overflow: hidden in .CodeMirror */
+  margin-bottom: -30px;
+  margin-right: -30px;
+  padding-bottom: 30px;
+  height: 100%;
+  outline: none;
+  /* Prevent dragging from highlighting the element */
+  position: relative; } -->
+
+<!-- <div class="CodeMirror-scroll" tabindex="-1" draggable="false"> -->
+
+</html>

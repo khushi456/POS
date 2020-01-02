@@ -13,7 +13,7 @@ function createWindow () {
                 app.quit()
               }
        }
-
+  
     ]},
   {
       label: 'Edit',
